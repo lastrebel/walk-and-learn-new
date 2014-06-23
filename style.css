@@ -1,0 +1,426 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+}
+
+header {
+    display: block;
+    height: 700px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#home header { background-image: url(media/header/tower.jpg); }
+#guides header { background-image: url(media/header/winter.jpg); }
+#walks header { background-image: url(media/header/gate.jpg); }
+#where header { background-image: url(media/header/bridge.jpg); }
+
+
+header h1 {
+    height: 240px;
+    width: 338px;
+    padding: 0;
+    position: relative;
+    text-indent: -9000px;
+    background: url(media/logo.png) no-repeat;
+    margin: 0 auto;
+}
+
+header p {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+header div {
+    position: relative;
+    top: 15%;
+}
+
+
+footer {
+    position: relative;
+    width: 100%;
+    display: block;
+    background: #333;
+    padding: 40px 0;
+}
+
+#master {
+    display: block;
+    position: relative;
+    top: 680px;
+    z-index: 2;
+}
+
+nav {
+    background: #333;
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    background: #000;   
+}
+
+section {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    padding: 140px 0 40px 0;
+}
+
+#walksintro {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+}
+
+#walksintro li {
+    position: relative;
+    width: 220px;
+    float: left;
+    padding-top: 220px;
+    margin-right: 40px;
+}
+
+#walksintro li:nth-child(1) {
+    background: url(media/home/architecture.jpg) no-repeat;
+}
+
+#walksintro li:nth-child(2) {
+    background: url(media/home/music.jpg) no-repeat;
+}
+
+#walksintro li:nth-child(3) {
+    background: url(media/home/gardens.jpg) no-repeat;
+}
+
+#walksintro li:nth-child(4) {
+    background: url(media/home/ghost.jpg) no-repeat;
+}
+
+#walksintro li:last-child {
+    margin-right: 0;
+}
+
+#walksintro h1 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#walksintro span {
+    font-weight: 700;
+    display: block;
+}
+
+.go a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: #666;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.go a:hover {
+    background: #000;
+    color: #090;
+}
+
+footer p {
+    color: #aaa;
+    text-align: center;
+    margin: 0;
+}
+
+footer p a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    border-bottom: 1px solid #090;
+}
+
+#social {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+#social li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#social li:last-child {
+    margin-right: 0;   
+}
+
+#social a {
+    display: block;
+    width: 116px;
+    height: 116px;
+    text-indent: -9000px;
+    background-image: url(media/social-media.png);
+    background-repeat: no-repeat;
+}
+
+#social li:nth-child(1) a {
+    background-position: -4px 0;
+}
+
+#social li:nth-child(2) a {
+    background-position: -128px 0;
+}
+
+#social li:nth-child(3) a {
+    background-position: -250px 0;
+}
+
+#social li:nth-child(1) a:hover {
+    background-position: -4px -119px;
+}
+
+#social li:nth-child(2) a:hover {
+    background-position: -128px -119px;
+}
+
+#social li:nth-child(3) a:hover {
+    background-position: -250px -119px;
+}
+
+article.walk {
+    display: block;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto 80px auto;
+    color: #fff;
+}
+
+article#architecture {
+    padding-left: 500px;
+    background: url(media/walks/architecture.jpg) 0 0 no-repeat, 
+                url(media/map-background.png) 0 0 no-repeat;    
+}
+
+article#music {
+    padding-right: 500px;
+    background: url(media/walks/music.jpg) 500px 0 no-repeat, 
+                url(media/map-background.png) 0 0 no-repeat;    
+}
+
+article#gardens {
+    padding-left: 500px;
+    background: url(media/walks/gardens.jpg) 0 0 no-repeat, 
+                url(media/map-background.png) 0 0 no-repeat;    
+}
+
+article#ghosts {
+    padding-right: 500px;
+    background: url(media/walks/ghost.jpg) 500px 0 no-repeat, 
+                url(media/map-background.png) 0 0 no-repeat;    
+}
+
+
+
+
+article.walk div {
+    padding: 20px;
+}
+
+article.walk h1 {
+    font-size: 22px;
+    margin: 0 0 1em 0;
+}
+
+article.walk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 460px;
+    bottom: 20px;
+    right: 20px;
+}
+
+article#music ul, article#ghosts ul {
+    left: 20px;
+}
+
+article.walk li {
+    width: 114px;
+    background: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 18px;
+}
+
+article.walk li:nth-child(3) {
+    margin-right: 0;
+}
+
+article.walk li:nth-child(4) {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 460px;
+    padding: 0;
+    background: transparent;
+}
+
+article.walk li a {
+    color: #0f0;
+    text-decoration: none;
+    display: block;
+    padding: 18px;
+    background: rgba(0, 0, 0, 1);   
+}
+
+article.walk li a:hover {
+    background: rgba(0, 0, 0, 0.5);   
+}
+
+article.walk li span {
+    font-weight: 400;   
+}
+
+article.guide {
+    width: 1000px;
+    margin: 0 auto 80px auto;
+    
+    overflow: hidden;
+    clear: both
+}
+
+article.guide div {
+    width: 500px;
+}
+.f-right {
+    float: right;
+}
+
+.f-left {
+    float: left;
+}
+
+article.guide h1 {
+    font-size: 22px;
+    margin: 0 0 1em 0;
+}
+
+article.guide h2 {
+    font-size: 18px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#where section{
+    padding: 70px 0 0 0;
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.info {
+    background: red;
+}
+
+.info img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.info div {
+    width: 300px;
+    float: right;
+}
+
+.info ul {
+    margin-left: 0;
+    font-weight: 800;
+    padding-left: 0;
+    color: #090;
+    list-style-type: none;
+}
+
+.info ul span {
+    font-weight: 700;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

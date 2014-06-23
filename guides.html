@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Walk&amp;Learn | Guides</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script>
+    
+    $(document).ready(function() {
+        
+        
+        var nav_top = $("nav").offset().top;
+        
+        // function to create sticky navigation
+        var sticky_navigation = function() {
+            
+            var scroll_top = $(window).scrollTop();
+            
+            if(scroll_top > nav_top) {
+                
+                $("nav").css({'position':'fixed','top':0,'left':0,'z-index':10});
+                $(".selected").css({'background':'#090'});
+                
+            } else {
+                
+                $("nav").css({'position':'absolute'});
+                $(".selected").css({'background':'inherit'});
+            }
+        
+        
+        };
+    
+     
+        sticky_navigation();
+        
+        $(window).scroll(function() {
+            sticky_navigation();
+        });
+    
+        
+        
+        $(".hidden").waypoint(function(direction) {
+            
+            if(direction === 'down') {
+                ///putting fade out in pictures
+                $(this).fadeTo('slow', 1);
+            } else {
+                $(this).fadeTo('slow', 0);
+            }
+            
+        }, {offset: 'bottom-in-view'});
+        
+    });
+    
+    </script>
+</head>
+<body id="guides">
+    
+    <header>
+        <div>
+        <h1>Walk&amp;Learn</h1>
+        <p>[smart walks for curious people]</p>
+        </div>
+    </header>
+    
+    <div id="master">
+    <nav>
+    
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="walks.html">Walks</a></li>
+            <li><a href="guides.html" class="selected">Guides</a></li>
+            <li><a href="where.html">Where</a></li>
+        </ul>
+        
+    </nav>
+    
+    <section>
+        
+        <article class="guide">
+            <img src="media/guides/eleonor.jpg" alt="Eleonor Ruby" class="f-left hidden" >
+            <div class="f-right">
+            <h1>Eleonor Ruby</h1>
+            <h2>A lover of Wolfgang Amadeus Mozart and your guide to all things to do with music</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque urna nec odio sagittis, vitae vehicula arcu ultricies. Vestibulum a neque ut ante posuere vulputate a sed tellus. Morbi pellentesque purus a turpis fermentum, et convallis nulla facilisis. Integer varius convallis odio, sed vulputate arcu blandit in. Ut nec urna magna. Praesent vitae odio in velit tincidunt semper. Aenean rhoncus tempus massa, eu iaculis metus ornare eu. Phasellus feugiat mi id lacus ullamcorper, nec tincidunt purus aliquet.</p>
+            </div>
+        </article>
+        
+         <article class="guide">
+            <img src="media/guides/lordnoir.jpg" alt="Eleonor Ruby" class="f-right hidden">
+            <div class="f-left">
+            <h1>Lord Imannuel Noir</h1>
+            <h2>Master of the dark arts and your guide to the legends of the ancient world</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque urna nec odio sagittis, vitae vehicula arcu ultricies. Vestibulum a neque ut ante posuere vulputate a sed tellus. Morbi pellentesque purus a turpis fermentum, et convallis nulla facilisis. Integer varius convallis odio, sed vulputate arcu blandit in. Ut nec urna magna. Praesent vitae odio in velit tincidunt semper. Aenean rhoncus tempus massa, eu iaculis metus ornare eu. Phasellus feugiat mi id lacus ullamcorper, nec tincidunt purus aliquet.</p>
+            </div>
+        </article>
+        
+         <article class="guide">
+            <img src="media/guides/me.jpg" alt="Eleonor Ruby" class="f-left hidden">
+            <div class="f-right">
+            <h1>Acyrtep Divad</h1>
+            <h2>The Jedi Master himself</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque urna nec odio sagittis, vitae vehicula arcu ultricies. Vestibulum a neque ut ante posuere vulputate a sed tellus. Morbi pellentesque purus a turpis fermentum, et convallis nulla facilisis. Integer varius convallis odio, sed vulputate arcu blandit in. Ut nec urna magna. Praesent vitae odio in velit tincidunt semper. Aenean rhoncus tempus massa, eu iaculis metus ornare eu. Phasellus feugiat mi id lacus ullamcorper, nec tincidunt purus aliquet.</p>
+            </div>
+        </article>
+        
+         <article class="guide">
+            <img src="media/guides/dog.jpg" alt="Eleonor Ruby" class="f-right hidden">
+            <div class="f-left">
+            <h1>Bango Basenji</h1>
+            <h2>Deep, deep, deep philosopher</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque urna nec odio sagittis, vitae vehicula arcu ultricies. Vestibulum a neque ut ante posuere vulputate a sed tellus. Morbi pellentesque purus a turpis fermentum, et convallis nulla facilisis. Integer varius convallis odio, sed vulputate arcu blandit in. Ut nec urna magna. Praesent vitae odio in velit tincidunt semper. Aenean rhoncus tempus massa, eu iaculis metus ornare eu. Phasellus feugiat mi id lacus ullamcorper, nec tincidunt purus aliquet.</p>
+            </div>
+        </article>
+             
+    </section>
+    
+    <footer>
+        
+        <ul id="social">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Tumblr</a></li>
+        </ul>
+        
+        <p><b>Walk&amp;Learn</b> is operated by <a href="">The Happy People</a> and this amazing website has been designed and coded by <a href="">Smells Like Almonds</a></p>
+        
+    </footer>
+    </div>
+</body>
+</html>
